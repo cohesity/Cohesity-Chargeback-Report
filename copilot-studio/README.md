@@ -1,3 +1,5 @@
+Copyright Cohesity 2026, SPDX-License-Identifier: Apache-2.0
+
 # Cohesity Chargeback Agent For Microsoft Copilot Studio
 
 Storage showback and chargeback per protection group, as a Copilot Studio agent. This is the same logic as the Claude skill in `../claude/`, rewritten as agent instructions and knowledge files.
@@ -72,7 +74,7 @@ This agent needs these read-only Helios MCP tools. Enable them and keep every ot
 
 | Area | Claude skill | Copilot Studio agent |
 |---|---|---|
-| Output | Live page that refreshes daily | Chat answer with tables, on demand |
+| Output | Live page (refresh schedule set in the page's Settings tab; Refresh from Helios link opens a Claude chat with the command) | Chat answer with tables, on demand |
 | Cluster choice | Multi-select on the page | Name the cluster in your question |
 | Schedule | Scheduled task in Claude | Power Automate flow with a schedule trigger (not part of this folder) |
 | Large Helios responses | Processed with code | Can be slow or hit tool limits on big estates. Ask for one cluster at a time. |
