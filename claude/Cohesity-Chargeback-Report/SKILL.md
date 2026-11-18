@@ -447,13 +447,6 @@ td.ovr{font-weight:700}
 .dim{color:var(--muted)}
 .empty{padding:22px;color:var(--muted);text-align:center}
 .foot{font-size:12px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:110ch}
-.avc{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--border);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;white-space:nowrap;color:var(--text)}
-.avc i{font-style:normal;font-weight:700}
-.avc.ok{border-color:var(--sel)}.avc.ok i{color:var(--sel)}
-.avc.warn{border-color:var(--accent)}.avc.warn i{color:var(--accent)}
-.avc.bad{border-color:var(--red,#c0392b)}.avc.bad i{color:var(--red,#c0392b)}
-.avc.na{border-style:dashed}
-#pane-meter td.avw{max-width:340px;overflow-wrap:anywhere;color:var(--muted)}
 .errbar{background:var(--card,#fff);color:var(--red,#c0392b);border:1px solid var(--red,#c0392b);border-left:4px solid var(--red,#c0392b);border-radius:8px;padding:10px 14px;margin:0 0 16px;font-size:13px;line-height:1.5}
 .rfr{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;font-size:12px;color:var(--muted,#5b6a67)}.rfr button,.rfr a.rfbtn{background:var(--card,#fff);color:var(--text,#1f2a28);border:1px solid var(--border,#dbe3e0);border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer}.rfr button:focus-visible,.rfr a.rfbtn:focus-visible{outline:2px solid var(--green,#2e7d32);outline-offset:2px}.rfr a.rfbtn{display:inline-block;text-decoration:none;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:normal}.rfr button:disabled{opacity:.55;cursor:not-allowed}#rfc{background:transparent;border-color:transparent;color:var(--muted,#5b6a67);text-decoration:underline}.rfr input{font:12px "Courier New",monospace;background:var(--card,#fff);color:var(--text,#1f2a28);border:1px solid var(--border,#dbe3e0);border-radius:6px;padding:5px 8px;width:300px;max-width:100%}
 .tabs{display:flex;flex-wrap:wrap;gap:0 4px;border-bottom:1px solid var(--border);margin-bottom:16px;overflow:visible}
@@ -467,7 +460,7 @@ td.ovr{font-weight:700}
 .sub{font-size:12px;color:var(--muted)}
 #pane-comp .cwhy{font-size:13px;line-height:1.6;margin:0 0 10px;max-width:900px}
 #pane-comp .cmh{margin:10px 0 6px;font-size:13px;font-weight:600;color:var(--text)}
-#pane-comp .tw,#pane-meter .tw{border:0;border-radius:0;background:none}#pane-comp table{min-width:0}
+#pane-comp .tw{border:0;border-radius:0;background:none}#pane-comp table{min-width:0}
 #pane-comp td.sv{font-weight:700;white-space:nowrap}#pane-comp td.sv.critical,#pane-comp td.sv.high{color:var(--red)}#pane-comp td.sv.medium,#pane-comp td.sv.low{color:var(--amber)}
 #pane-comp td.cx{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:11px;overflow-wrap:anywhere;max-width:260px}
 #pane-comp td.wy{max-width:280px;color:var(--muted)}
@@ -499,9 +492,6 @@ body.pdfmode .cfpg{display:none!important}
 #gt{width:90px;border-radius:8px;border-left:1px solid var(--border)}
 .sec{margin:20px 0 8px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 .sec:first-child{margin-top:0}
-#pane-meter .foot{max-width:none}
-#pane-meter table{min-width:0}
-#pane-meter td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:14px;border-bottom:3px solid var(--green);margin-bottom:16px}
 .meta{text-align:right;font-size:12px;color:var(--muted);line-height:1.6}
 .hr{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
@@ -664,9 +654,6 @@ a.set-btn{text-decoration:none;box-sizing:border-box;text-align:center}
 }
 @media print{#set-dlg,.dlg-ov{display:none!important}}
 /* Audit trail pop-up and Pricing source card (tokens only) */
-.card .chd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin:0 0 10px}.card .chd h2{margin:0}
-.abtn{background:var(--card,#fff);color:var(--text,#1f2a28);border:1px solid var(--border,#dbe3e0);border-radius:6px;padding:6px 12px;min-height:44px;font:inherit;font-size:12px;cursor:pointer}
-.abtn:hover:not(:disabled){background:var(--hover,#f2f7f5)}.abtn:focus-visible{outline:2px solid var(--sel,#1f7a6d);outline-offset:2px}.abtn:disabled{opacity:.55;cursor:not-allowed}
 body.aud-lock{overflow:hidden}
 #aud-dlg,#aud-dlg *{box-sizing:border-box}
 #aud-dlg{padding:0;border:1px solid var(--border,#dbe3e0);border-radius:10px;background:var(--card,#fff);color:var(--text,#1f2a28);width:calc(100% - 24px);max-width:1100px;max-height:calc(100% - 24px);font-size:13px;line-height:1.55}
@@ -705,31 +692,76 @@ body.aud-lock{overflow:hidden}
 #aud-dlg .aud-f{flex:none;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end;padding:12px 18px;border-top:1px solid var(--border,#dbe3e0);background:var(--card,#fff)}
 #aud-dlg .aud-f .aud-dm{margin-right:auto;font-size:12px;color:var(--muted,#5b6a67)}
 @media(max-width:700px){#aud-dlg .aud-h,#aud-dlg .aud-b,#aud-dlg .aud-f{padding:12px}#aud-dlg .afb label{flex:1 1 100%}#aud-dlg .afb select,#aud-dlg .afb input{min-height:44px;width:100%}#aud-dlg .afb .abtn{width:100%}#aud-dlg .aud-f .abtn{flex:1 1 100%}}
-.prc .fbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end;margin:8px 0}
-.prc .fbar label{flex:1 1 320px;min-width:0;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;gap:4px}
-.prc .fbar input{width:100%;min-height:36px;min-width:0;max-width:100%;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 8px;font:inherit;font-size:12px;text-transform:none;letter-spacing:0}
-.prc .fbar input:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
-.prc input[readonly]{opacity:.8}
-.prc p.sub{margin:4px 0 0;line-height:1.5;overflow-wrap:anywhere}
-#pane-meter .btn,#pane-meter .btn.aub{display:inline-flex;align-items:center;min-height:36px;padding:6px 12px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text);font:inherit;font-size:12px;font-weight:400;text-decoration:none;cursor:pointer}
-#pane-meter .btn:hover:not(:disabled){background:var(--hover)}
-#pane-meter .btn:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
-#pane-meter .btn:disabled{opacity:.55;cursor:not-allowed}
-#pane-meter .btn[hidden]{display:none}
-#pane-meter table{font-size:12px;min-width:0}
-#pane-meter th{font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);padding:4px 6px;border-bottom:1px solid var(--border);white-space:nowrap}
-#pane-meter td{padding:7px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
-#pane-meter .tw.sc{max-height:460px}
-#pane-meter .card h2{margin:0 0 12px;font-size:14px;font-weight:700}
-#pane-meter .chd{gap:12px;margin:0 0 12px}
-#pane-meter .foot{margin-top:8px;font-size:12px;line-height:1.6}
-#pane-meter td.mo{white-space:nowrap;min-width:9.5em;font-variant-numeric:tabular-nums}
-#pane-meter tr.tot td{font-weight:700}
 details.how>summary{display:inline-flex;align-items:center;list-style:none;padding:0 2px}
 details.how>summary::-webkit-details-marker{display:none}
 details.how>summary::before{content:"\25B8";display:inline-block;margin-right:6px}
 details.how[open]>summary::before{content:"\25BE"}
-@media(max-width:600px){#pane-meter .btn,#pane-meter .btn.aub{min-height:44px}.prc .fbar .btn{flex:1 1 auto}details.how>summary{min-height:44px}}
+@media(max-width:600px){details.how>summary{min-height:44px}}
+/* Run Metrics pane: the Fleet Health rules (same declarations; Fleet's page-wide selectors are prefixed with :where(#pane-meter) so the specificity order inside the pane is Fleet's) */
+#pane-meter,#aud-dlg{font-family:Arial,Helvetica,sans-serif}
+:where(#pane-meter) p{font-size:13px;line-height:1.55;margin:0}
+:where(#pane-meter) .grid{display:grid;gap:16px;margin:0 0 16px}
+:where(#pane-meter) .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){:where(#pane-meter) .g2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){:where(#pane-meter) .g2{grid-template-columns:minmax(0,1fr)}}
+:where(#pane-meter) .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;min-width:0;margin:0}
+:where(#pane-meter) .card h2{margin:0 0 12px;font-size:14px;font-weight:700}
+:where(#pane-meter) .sub{font-size:12px;color:var(--muted)}
+:where(#pane-meter) .tw{overflow-x:auto;border:0;border-radius:0;background:none}
+:where(#pane-meter) table{width:100%;border-collapse:collapse;font-size:12px;min-width:0}
+:where(#pane-meter) th{text-align:left;color:var(--muted);font-weight:600;padding:4px 6px;border-bottom:1px solid var(--border);font-size:inherit;letter-spacing:normal;text-transform:none}
+:where(#pane-meter) td{padding:7px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
+:where(#pane-meter) td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+:where(#pane-meter) td.msg{max-width:300px;color:var(--muted);overflow-wrap:anywhere}
+:where(#pane-meter) .chip{display:inline-block;background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:2px 8px;font-size:11px;white-space:nowrap}
+:where(#pane-meter) .chip.hot{border-color:var(--red);color:var(--red)}
+:where(#pane-meter) .triage{margin-bottom:16px}
+:where(#pane-meter) .fbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end;margin:0 0 10px}
+:where(#pane-meter) .fbar label{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+:where(#pane-meter) .fbar select,:where(#pane-meter) .fbar input{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 8px;font:inherit;font-size:12px;min-width:0;max-width:100%}
+:where(#pane-meter) .fbar input{width:170px}
+:where(#pane-meter) .fbar select:focus-visible,:where(#pane-meter) .fbar input:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+:where(#pane-meter) .tw.sc{max-height:440px;overflow:auto}
+:where(#pane-meter) .tw.sc thead th{position:sticky;top:0;background:var(--card);z-index:1}
+:where(#pane-meter) .foot{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:none}
+:where(#pane-meter) .kit.stat{margin:0}
+:where(#pane-meter) td.gn{font-weight:600;overflow-wrap:anywhere}
+:where(#pane-meter) .chip.amb{border-color:var(--amber);color:var(--amber)}
+:where(#pane-meter) .chip.ok{border-color:var(--green);color:var(--green)}
+:where(#pane-meter) .full{margin-bottom:16px}
+:where(#pane-meter) th{white-space:nowrap}
+:where(#pane-meter) #mbm td:first-child{white-space:nowrap;min-width:116px}
+:where(#pane-meter) #tas,:where(#pane-meter) #mavs{margin:0 0 8px;line-height:1.5}
+:where(#pane-meter) tr.tot td{font-weight:700}
+:where(#pane-meter) #mman{margin:8px 0 0}
+:where(#pane-meter) details.how{margin:0 0 16px;border:1px solid var(--border);border-radius:10px;background:var(--card);padding:0 14px;font-size:inherit;color:inherit}
+:where(#pane-meter) details.how>summary{display:flex;align-items:center;min-height:44px;cursor:pointer;list-style:none;font-size:12px;color:var(--muted);padding:0;margin:0}
+:where(#pane-meter) details.how[open]>summary{margin-bottom:0}
+:where(#pane-meter) details.how>summary::-webkit-details-marker{display:none}
+:where(#pane-meter) details.how>summary::before{content:"\25B8";display:inline-block;width:14px;margin-right:0;color:var(--muted)}
+:where(#pane-meter) details.how[open]>summary::before{content:"\25BE"}
+:where(#pane-meter) details.how>summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:4px}
+:where(#pane-meter) details.how>.foot,:where(#pane-meter) details.how>p{margin:0 0 12px}
+:where(#pane-meter) .card details.how{border:0;background:none;padding:0;margin:6px 0 0}
+:where(#pane-meter) .card details.how>.foot{margin:0 0 6px}
+/* Audit trail button, Pricing source card (Fleet) */
+.chh{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}.chh h2{margin:0!important}
+.abtn{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:6px 12px;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:6px;font:inherit;font-size:12px;line-height:1.3;text-decoration:none;cursor:pointer}
+.abtn:hover:not(:disabled){background:var(--hover)}
+.abtn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.abtn:disabled{opacity:.55;cursor:not-allowed}
+.abtn.pri{background:var(--green);color:var(--bg);border-color:var(--green);font-weight:700}
+a.abtn:visited{color:var(--text)}a.abtn.off{opacity:.55;pointer-events:none}
+.prc .fbar{align-items:flex-end;margin:8px 0}
+.prc .fbar label{flex:1 1 320px;min-width:0}
+.prc .fbar input{width:100%;min-height:36px}
+.prc .abtn:disabled{opacity:.55;cursor:not-allowed}
+.prc input[readonly]{opacity:.8}
+.prc p.sub{margin:4px 0 0;line-height:1.5;overflow-wrap:anywhere}
+.prc p.sub.bad{font-weight:700;color:var(--red)}
+@media(max-width:600px){.abtn{min-height:44px}.prc .fbar .abtn{flex:1 1 auto}}
+#aud-dlg .abtn{min-height:44px}
+body.pdfmode .abtn{display:none!important}
 body.pdfmode .prc .fbar,body.pdfmode .prc #prc-h,body.pdfmode .prc #prc-ro{display:none!important}
 @media print{.prc .fbar{display:none!important}}
 body.pdfmode #aud-dlg,body.pdfmode .aud-ov,body.pdfmode .pdfhid{display:none!important}
@@ -977,24 +1009,24 @@ if(rc)rc.addEventListener('click',function(){
 </details>
 </div>
 <div class="pane" id="pane-meter" role="tabpanel" aria-labelledby="tabm" hidden>
-<h3 class="sec">Last run</h3><div class="kit" id="ml"></div>
-<h3 class="sec">Last 24 hours</h3><div class="kit" id="md"></div>
-<h3 class="sec" id="mmh">Month to date</h3><div class="kit" id="mm"></div>
-<h3 class="sec">Estimated cost</h3><div class="kit" id="cc"></div><details class="how"><summary>How to read this</summary><div class="foot" id="cn"></div></details>
-<div class="card prc" id="prc"><h2>Pricing source</h2>
+<h3 class="sec">Last run</h3><div class="kit stat" id="ml"></div>
+<h3 class="sec">Last 24 hours</h3><div class="kit stat" id="md"></div>
+<h3 class="sec" id="mmh">Month to date</h3><div class="kit stat" id="mm"></div>
+<h3 class="sec">Estimated cost</h3><div class="kit stat" id="cc"></div><details class="how"><summary>How to read this</summary><div class="foot" id="cn"></div></details>
+<div class="card full prc" id="prc"><h2>Pricing source</h2>
 <p class="sub" id="prc-d">Where the skill looks up the price per million input tokens. Default is Anthropic's public pricing page. If your company has a negotiated rate, link a page or file that lists it.</p>
-<div class="fbar"><label for="prc-u">Source link<input id="prc-u" type="text" inputmode="url" autocomplete="off" spellcheck="false" value="https://platform.claude.com/docs/en/about-claude/pricing" aria-describedby="prc-h prc-st"></label><a class="btn" id="prc-o" href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Open</a><button type="button" class="btn" id="prc-s" disabled>Save</button><button type="button" class="btn" id="prc-r" disabled>Reset to default</button></div>
+<div class="fbar"><label for="prc-u">Source link<input id="prc-u" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" value="https://platform.claude.com/docs/en/about-claude/pricing" aria-describedby="prc-h prc-st"></label><a class="abtn" id="prc-o" href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Open</a><button type="button" class="abtn" id="prc-s" disabled>Save</button><button type="button" class="abtn" id="prc-r" disabled>Reset to default</button></div>
 <p class="sub" id="prc-h">The skill reads the file or page when it runs. Keep it to a table of model names and USD per million input tokens. Links to .xlsx, .xls and .csv files and to normal pages work.</p>
 <p class="sub" id="prc-ro" hidden>Only people who can edit this page can change it.</p>
-<p class="sub" id="prc-st" role="status">Using default source</p>
+<p class="sub" id="prc-st" role="status" aria-live="polite">Using default source</p>
 <p class="sub" id="prc-l">Used by the last run: not recorded</p></div>
 <div class="grid g2">
 <div class="card"><h2>By Month</h2><div class="tw sc"><table><thead><tr><th>Month (UTC)</th><th>Runs</th><th>Tool calls</th><th>Time</th><th>Est. tokens</th><th>Est. cost</th></tr></thead><tbody id="mbm"></tbody></table></div></div>
 <div class="card"><h2>Last Run: Calls By Tool</h2><div class="tw sc"><table><thead><tr><th>Tool</th><th>Calls</th></tr></thead><tbody id="mt"></tbody></table></div><div class="foot" id="mc"></div></div>
 </div>
-<div class="card"><h2>Tool Availability</h2><p class="sub" id="mavs"></p><div class="tw sc"><table><thead><tr><th scope="col">Tool</th><th scope="col">Status</th><th scope="col">Calls</th><th scope="col">Why</th><th scope="col">Affects</th></tr></thead><tbody id="mav"></tbody></table></div><details class="how"><summary>How to read this</summary><div class="foot" id="mavf"></div></details></div>
-<div class="card"><h2>Helios Tool Calls (This Run)</h2><div class="tw sc"><table><thead><tr><th>Tool</th><th>Calls</th><th>OK</th><th>Partial</th><th>Failed</th><th>Timeout</th><th>Not entitled</th><th>Retries</th><th>Avg s</th><th>Max s</th></tr></thead><tbody id="mtt"></tbody></table></div><details class="how"><summary>How to read this</summary><div class="foot" id="mtc"></div></details></div>
-<div class="card"><div class="chd"><h2>Run History</h2><button type="button" class="btn aub" id="aud-open" aria-haspopup="dialog">Audit trail</button></div><div class="tw sc"><table><thead><tr><th>Finished (UTC)</th><th>Trigger</th><th>Model</th><th>Tool calls</th><th>Time</th><th>Est. tokens</th><th>Est. cost</th><th>Retries</th><th>Errors</th><th>Avg s / call</th></tr></thead><tbody id="mh"></tbody></table></div><div class="foot" id="mhf"></div></div>
+<div class="card full" id="avc"><h2>Tool Availability</h2><p class="sub" id="mavs"></p><div class="tw sc"><table><thead><tr><th scope="col">Tool</th><th scope="col">Status</th><th scope="col">Calls</th><th scope="col">Why</th><th scope="col">Affects</th></tr></thead><tbody id="mav"></tbody></table></div><details class="how"><summary>How to read this</summary><div class="foot" id="mavf"></div></details></div>
+<div class="card full"><h2>Helios Tool Calls (This Run)</h2><div class="tw sc"><table><thead><tr><th>Tool</th><th>Calls</th><th>OK</th><th>Partial</th><th>Failed</th><th>Timeout</th><th>Not entitled</th><th>Retries</th><th>Avg s</th><th>Max s</th></tr></thead><tbody id="mtt"></tbody></table></div><details class="how"><summary>How to read this</summary><div class="foot" id="mtc"></div></details></div>
+<div class="card triage"><div class="chh"><h2>Run History</h2><button type="button" class="abtn" id="aud-open" aria-haspopup="dialog">Audit trail</button></div><div class="tw sc"><table><thead><tr><th>Finished (UTC)</th><th>Trigger</th><th>Model</th><th>Tool calls</th><th>Time</th><th>Est. tokens</th><th>Est. cost</th><th>Retries</th><th>Errors</th><th>Avg s / call</th></tr></thead><tbody id="mh"></tbody></table></div><div class="foot" id="mhf"></div></div>
 <details class="how"><summary>How to read this</summary><div class="foot">Counts cover data collection, up to the start of publishing. The model cannot read its own token meter, so tokens are the size of the tool output divided by 4, an estimate. The total that the model processes is several times larger, because it reads the conversation again at each step. For measured usage, open Settings &gt; Usage in Claude. Windows end at the latest run, not at the time you open the page.</div><div class="foot" id="mhwhy">Why the number of tool calls changes from run to run. It follows how much the run has to read, not a fixed routine. 1) Full or incremental: where a skill supports it, a full pull reads everything and an incremental refresh reads only what changed since the last pull, so the count can fall from dozens of calls to a handful. 2) Size of the estate: each cluster, protection group or view that is read costs about one call, so more clusters or groups means more calls. 3) Retries: a call that times out is retried once, and the retry counts as a call. 4) Optional steps: Cohesity AI agent calls (when switched on in Settings) and drill-downs into groups that failed add calls. 5) Limits: a run stops at its call cap or after repeated timeouts to protect Helios, so a run that hits a limit shows fewer calls and says so in its scope note. The scope note under the report tabs names the path (full or incremental) and the counts for the latest run.</div></details>
 <div class="foot" id="mman" hidden></div>
 </div>
@@ -2060,7 +2092,7 @@ function meter(){
  cards('cc',[['Last run',money(cL),(L.model||'model not recorded')+(price(L)!==null?' at $'+price(L)+' per million tokens'+(L.psrc==='custom'?' (custom source)':''):'')],['Last 24 hours',known?money(cD):'n/a','sum of runs in the window'],['Month to date',known?money(cM):'n/a','recorded runs since the 1st'],['Projected for the month',known?money(cM+(SC&&SC.perDay>0?(cM/Math.max(1,H.filter(function(x){return x.t.slice(0,7)===mk}).length))*SC.perDay*(dim-day):0)):'n/a',SC&&SC.perDay>0?'month to date plus '+Math.round(SC.perDay*(dim-day))+' more runs ('+(SC.label||SC.perDay+' per day')+')':'no schedule found, so no further runs are projected']]);
  $('cn').textContent='Cost = estimated tokens of tool output the model read x the price per million input tokens of the model that ran. The projection adds the average cost per run times the runs left in the month on the schedule found when the run started; with no schedule it adds nothing. Prices are read at run time from the source in the Pricing source card below (default: the Anthropic pricing page) and are stored with each run, with the source used. It does not include output tokens, caching discounts or the conversation the model re-reads at each step; Settings > Usage shows measured cost.';
  var by={};H.forEach(function(x){var k=x.t.slice(0,7);(by[k]=by[k]||[]).push(x)});
- var bm=$('mbm');bm.textContent='';Object.keys(by).sort().reverse().forEach(function(k){var r=sum(by[k]),tr=el('tr');tr.appendChild(el('td','mo',k+(k===mk?' (to date)':'')));var ck=true,cs=0;by[k].forEach(function(x){var c=cost(x);if(c===null)ck=false;else cs+=c});[String(r.runs),fmt(r.calls),dur(r.sec),tok(r.tok),ck?money(cs):'n/a'].forEach(function(v){tr.appendChild(el('td','num',v))});bm.appendChild(tr)});
+ var bm=$('mbm');bm.textContent='';Object.keys(by).sort().reverse().forEach(function(k){var r=sum(by[k]),tr=el('tr');tr.appendChild(el('td','',k+(k===mk?' (to date)':'')));var ck=true,cs=0;by[k].forEach(function(x){var c=cost(x);if(c===null)ck=false;else cs+=c});[String(r.runs),fmt(r.calls),dur(r.sec),tok(r.tok),ck?money(cs):'n/a'].forEach(function(v){tr.appendChild(el('td','num',v))});bm.appendChild(tr)});
  var mh=$('mh');mh.textContent='';H.slice().reverse().forEach(function(x){var tr=el('tr');tr.appendChild(el('td','num',x.t.replace('T',' ').replace('Z','')));tr.appendChild(el('td','',x.src||''));tr.appendChild(el('td','',x.model||'not recorded'));[fmt(x.calls),dur(x.sec),tok(x.tok),money(cost(x)),typeof x.ret==='number'?fmt(x.ret):'n/a',typeof x.err==='number'?fmt(x.err):'n/a',typeof x.avgS==='number'?x.avgS.toFixed(1):'n/a'].forEach(function(v){tr.appendChild(el('td','num',v))});mh.appendChild(tr)});
  $('mhf').textContent=H.length+' run'+(H.length>1?'s':'')+' recorded, newest first. Every run is kept.';
  var mt=$('mt');mt.textContent='';if(M){var b=M.byTool||{};Object.keys(b).sort(function(p,q){return b[q]-b[p]}).forEach(function(k){var r=el('tr');r.appendChild(el('td','',k));r.appendChild(el('td','num',String(b[k])));mt.appendChild(r)});
@@ -2089,7 +2121,7 @@ function toolsMeter(){
  function fmt(n){return Number(n).toLocaleString('en-US')}
  function num(v){return typeof v==='number'&&isFinite(v)}
  function f1(v){return num(v)?v.toFixed(1):'n/a'}
- function cell(tr,v,c){tr.appendChild(el('td',c||'num',v))}
+ function cell(tr,v,c){tr.appendChild(el('td',c===undefined?'num':c,v))}
  if(!T){cp.textContent=M?'Per-call timing was not recorded for this run, so it shows n/a.':'No run recorded.'}
  else{
   var g={},ord=[],rows=T.slice(0,400);
@@ -2098,7 +2130,7 @@ function toolsMeter(){
   var tot={n:0,ok:0,pa:0,fa:0,to:0,ne:0,re:0,ss:0,sn:0,mx:null};
   ord.concat(['']).forEach(function(k){var r=k===''?tot:g[k],tr=el('tr');
    if(k!==''){['n','ok','pa','fa','to','ne','re','ss','sn'].forEach(function(f){tot[f]+=r[f]});if(r.mx!==null&&(tot.mx===null||r.mx>tot.mx))tot.mx=r.mx}
-   cell(tr,k===''?'All tools':(window.__mask?window.__mask(k):k),'');[fmt(r.n),fmt(r.ok),fmt(r.pa),fmt(r.fa),fmt(r.to),fmt(r.ne),fmt(r.re),r.sn?f1(r.ss/r.sn):'n/a',f1(r.mx)].forEach(function(v){cell(tr,v)});if(k==='')tr.className='tot';tb.appendChild(tr)});
+   cell(tr,k===''?'All tools':(window.__mask?window.__mask(k):k),k===''?'':'gn');[fmt(r.n),fmt(r.ok),fmt(r.pa),fmt(r.fa),fmt(r.to),fmt(r.ne),fmt(r.re),r.sn?f1(r.ss/r.sn):'n/a',f1(r.mx)].forEach(function(v){cell(tr,v)});if(k==='')tr.className='tot';tb.appendChild(tr)});
   cp.textContent='Seconds are the wall-clock of the batch the call ran in, measured with the system clock before and after each batch of parallel calls; calls in one batch share one figure, so do not add them up or read them as server time (the figure includes the short model turn between the two clock reads, so it is an upper bound). '+rows.length+' call rows recorded'+(num(M.calls)?' for '+M.calls+' calls counted':'')+(T.length>400?' (first 400 shown)':'')+'. Calls with another outcome (empty) count under Calls only.'}
 }
 var MKX;try{MKX=(function(){
@@ -2149,10 +2181,10 @@ function availMeter(){
  var okN=0,pa=0,un=[],nc=0;L.forEach(function(r){if(r.st==='ok')okN++;else if(r.st==='partial'){okN++;pa++}else if(down(r))un.push(String(r.t||'unknown').slice(0,80)+(r.rep?' for '+String(r.rep).slice(0,60):''));else nc++});
  sm.textContent=mx(okN+' of '+L.length+' tools available'+(pa?' ('+pa+' with a partial result)':'')+'; '+un.length+' unavailable'+(un.length?' ('+un.join(', ')+')':'')+(nc?'; '+nc+' not checked':'')+(un.length?'; this page shows n/a for the parts that depend on them.':'.'));
  L.forEach(function(r){var tr=el('tr'),c=down(r)&&r.st!=='skipped'?'bad':r.st==='partial'||r.st==='skipped'?'warn':r.st==='ok'?'ok':'na',ic=c==='bad'?'\u2715':c==='warn'?'!':c==='ok'?'\u2713':'?';
-  tr.appendChild(el('td','',mx(nm(r))));
-  var sc=el('td'),ch=el('span','avc '+c);ch.appendChild(el('i','',ic)).setAttribute('aria-hidden','true');ch.appendChild(document.createTextNode(avLabel(r)));sc.appendChild(ch);tr.appendChild(sc);
+  tr.appendChild(el('td','gn',mx(nm(r))));
+  var sc=el('td'),ch=el('span','chip avc '+c+(c==='bad'?' hot':c==='warn'?' amb':c==='ok'?' ok':''));ch.appendChild(document.createTextNode(ic+' '+avLabel(r)));sc.appendChild(ch);tr.appendChild(sc);
   tr.appendChild(el('td','num',typeof r.n==='number'&&isFinite(r.n)?fmt(r.n):'n/a'));
-  var w=avWhy(r.why);tr.appendChild(el('td','avw',w?mx(w):'-'));
+  var w=avWhy(r.why);tr.appendChild(el('td','msg',w?mx(w):'-'));
   var a=aff(r);tr.appendChild(el('td','',a.length?mx(a.join(', ')):'-'));tb.appendChild(tr)});
  ft.textContent='One row per tool; the report preview tool is listed once per report it read. Status comes from the answer or the error text of each call. A tool that did not answer shows its reason, and the parts of the tabs that depend on it show n/a.'}
 try{availMeter()}catch(e){}
@@ -2234,56 +2266,64 @@ var AUDX=(function(){
  if(dlg){build();var ob=$('aud-open');if(ob)ob.addEventListener('click',open)}
  return{rows:function(){return ROWS},csv:csvText,all:function(){return csvRows(ROWS.slice().sort(function(x,y){return(x.t<y.t?-1:x.t>y.t?1:x.i-y.i)*-1}))},open:open,close:close,filt:filt}})();
 function audAllRows(){return AUDX&&AUDX.all?AUDX.all():[['time_utc']]}
-/* Pricing source card: the page only stores the link in settings/pricing; the skill reads it at run time. */
-var PRC=(function(){
- var DEF='https://platform.claude.com/docs/en/about-claude/pricing',MAXL=500,inp=$('prc-u'),sv=$('prc-s'),rs=$('prc-r'),op=$('prc-o'),st=$('prc-st'),ro=$('prc-ro');
- if(!inp||!sv||!rs||!op||!st)return null;
- var S={saved:null,db:null,u:null,ready:false,can:false,dirty:false,msg:'',err:'',busy:false};
- function check(v){v=String(v==null?'':v).trim();if(!v)return 'Enter a link that starts with https://.';
-  if(v.length>MAXL)return 'The link is longer than '+MAXL+' characters.';
-  if(/\s/.test(v))return 'The link must not contain spaces.';
-  if(!/^https:\/\//i.test(v))return 'The link must start with https://.';
-  if(/^https:\/\/[^\/?#]*@/i.test(v))return 'The link must not contain a user name or password.';
-  var u;try{u=new URL(v)}catch(e){return 'That is not a valid link.'}
-  if(u.username||u.password)return 'The link must not contain a user name or password.';
-  if(!u.hostname)return 'That is not a valid link.';return ''}
- function eff(){var s=S.saved;return s&&typeof s.url==='string'&&!check(s.url)?s.url.trim():DEF}
+/* PRICING-SOURCE: editable source for the price per million input tokens (Run Metrics). The page only stores the link in settings/pricing; it never fetches it. The skill reads it each run. */
+var PRC=null;try{PRC=(function(){
+ var DEF='https://platform.claude.com/docs/en/about-claude/pricing',card=$('prc');if(!card)return null;
+ var inp=$('prc-u'),sv=$('prc-s'),rs=$('prc-r'),op=$('prc-o'),st=$('prc-st'),ro=$('prc-ro'),la=$('prc-l');
+ var S={db:null,pend:true,doc:null,edit:null,signed:null,busy:false,msg:'',bad:false,dirty:false};
+ function chk(v){var t=String(v==null?'':v).trim();
+  if(!t)return 'Enter a link that starts with https://.';
+  if(t.length>500)return 'Use at most 500 characters.';
+  if(/\s/.test(t))return 'The link cannot contain spaces.';
+  if(!/^https:\/\//i.test(t))return 'The link must start with https://.';
+  var u;try{u=new URL(t)}catch(e){return 'This is not a valid link.'}
+  if(u.protocol!=='https:'||!u.hostname)return 'This is not a valid link.';
+  if(u.username||u.password||/^https:\/\/[^\/?#]*@/i.test(t))return 'Remove the user name and password from the link.';
+  return ''}
+ function snapDoc(s){try{if(!s)return null;if(typeof s.exists==='function'&&!s.exists())return null;if(typeof s.exists==='boolean'&&!s.exists)return null;
+  var d=typeof s.data==='function'?s.data():(s.data!==undefined?s.data:s);if(!d||typeof d!=='object'||typeof d.url!=='string'||chk(d.url))return null;
+  return{url:d.url.trim(),savedAt:typeof d.savedAt==='string'?d.savedAt:'',savedById:typeof d.savedById==='string'?d.savedById:'',savedByName:typeof d.savedByName==='string'?d.savedByName:''}}catch(e){return null}}
+ function eff(){return S.doc?S.doc.url:DEF}
+ function msk(s){s=s==null?'':String(s);try{return window.__mask?window.__mask(s):s}catch(e){return s}}
+ function nm(n){n=String(n||'').trim();if(!n)return '';var on=true;try{on=window.__maskOn?!!window.__maskOn():true}catch(e){}return on?n.split(/\s+/).map(function(w){return w.charAt(0)+'*'.repeat(Math.max(w.length-1,0))}).join(' '):n}
  function host(u){try{return new URL(u).hostname}catch(e){return ''}}
- function when(t){var m=/^(\d{4}-\d\d-\d\d)T(\d\d:\d\d)/.exec(String(t||''));return m?m[1]+' '+m[2]+' UTC':''}
- function nm(n){n=String(n||'').trim();if(!n)return '';if(window.__maskOn&&window.__maskOn())return n.split(/\s+/).map(function(w){return w.charAt(0)+'***'}).join(' ');return n}
- function status(){if(S.err)return S.err;if(S.msg)return S.msg;var e=check(inp.value);if(S.dirty&&e)return e;var u=eff();if(u===DEF)return 'Using default source';
-  var s0=S.saved||{},w=when(s0.savedAt),n=nm(s0.savedByName);return 'Using custom source: '+host(u)+(w?', saved '+w:'')+(n?' by '+n:'')}
- function ed(){return !!(S.ready&&S.u&&S.can&&S.db)}
- function render(){var e=ed();inp.readOnly=!e;if(!S.dirty&&document.activeElement!==inp)inp.value=eff();
-  var v=check(inp.value),same=inp.value.trim()===eff();
-  sv.disabled=!e||S.busy||!!v||same;rs.disabled=!e||S.busy||(eff()===DEF&&inp.value.trim()===DEF);
-  op.setAttribute('href',eff());if(ro)ro.hidden=!S.ready||e;
-  st.textContent=status()}
- function perm(x){var m=x&&(x.code||x.status||x.message||x);return /permission|denied|forbidden|unauthor|403|401|admin/i.test(String(m))}
- function who(){var u=S.u;if(!u||typeof u.id!=='function')return Promise.resolve(null);
-  return Promise.resolve().then(function(){return u.id()}).then(function(id){id=typeof id==='string'?id.trim():'';if(!id)return null;
-   var name='';return Promise.resolve().then(function(){return typeof u.me==='function'?u.me():null}).then(function(m){if(m&&typeof m==='object')name=String(m.name||m.displayName||m.fullName||'').trim()},function(){}).then(function(){return{id:id,name:name}})}).then(function(w){return w},function(){return null})}
- function save(url){if(!ed()||S.busy)return;S.busy=true;S.err='';S.msg='Saving.';render();
-  who().then(function(w){
-   if(!w){S.busy=false;S.msg='';S.err='Not saved: could not identify you. Sign in and try again.';render();return}
-   var o={url:url,savedAt:new Date().toISOString().replace(/\.\d+Z$/,'Z'),savedById:w.id,savedByName:w.name};
-   var p;try{p=S.db.doc('settings/pricing').set(o)}catch(x){p=Promise.reject(x)}
-   Promise.resolve(p).then(function(){S.busy=false;S.saved=o;S.dirty=false;S.err='';S.msg='Saved. Used on the next run.';inp.value=url;render()},
-    function(x){S.busy=false;S.msg='';S.err=perm(x)?'Not saved: only people who can edit this page can change it.':'Could not save. Nothing was changed. Try again later.';render()})})}
- inp.addEventListener('input',function(){S.msg='';S.err='';S.dirty=inp.value.trim()!==eff();render()});
- sv.addEventListener('click',function(){var u=inp.value.trim();if(check(u))return;save(u)});
- rs.addEventListener('click',function(){S.msg='';S.err='';if(eff()!==DEF){save(DEF);return}S.dirty=false;inp.value=DEF;render()});
- var mkb=$('mk');if(mkb)mkb.addEventListener('change',function(){render()});
- render();
- (async function(){try{var cl0=window.claude;if(!cl0||typeof cl0.use!=='function'){S.ready=true;render();return}
-  var u=null;try{u=await cl0.use('user')}catch(e){u=null}
-  S.u=u&&typeof u==='object'?u:null;if(S.u){try{S.can=typeof S.u.canEdit==='function'?S.u.canEdit()!==false:false}catch(e){S.can=false}}
-  var db=null;try{db=await cl0.use('db')}catch(e){db=null}
-  if(db&&typeof db.doc==='function'){S.db=db;
-   try{db.doc('settings/pricing').onSnapshot(function(s){var d=null;try{if(s&&(typeof s.exists==='function'?s.exists():s.exists!==false)){d=typeof s.data==='function'?s.data():s.data}}catch(e){d=null}
-     S.saved=d&&typeof d==='object'?d:null;if(/read the saved/.test(S.err))S.err='';render()},function(){S.err='Could not read the saved source. The default source is shown.';render()})}catch(e){}}
-  S.ready=true;render()}catch(e){S.ready=true;try{render()}catch(x){}}})();
- return{check:check,render:render}})();
+ function when(a){var m=/^(\d{4}-\d\d-\d\d)[T ](\d\d:\d\d)/.exec(String(a||''));return m?m[1]+' '+m[2]+' UTC':''}
+ function can(){return !!S.db&&S.signed===true&&S.edit!==false}
+ function lastRow(){var H=(D.meterHistory||[]).slice().sort(function(x,y){return x.t<y.t?-1:1});return H.length?H[H.length-1]:null}
+ function lastTxt(){var r=lastRow(),p=r&&typeof r.psrc==='string'?r.psrc:'';
+  var w=p==='default'?'default':p==='custom'?'custom'+(typeof r.phost==='string'&&r.phost?' ('+msk(r.phost)+')':''):p==='carried'?'earlier price':p==='none'?'none':'not recorded';return 'Used by the last run: '+w}
+ function paint(){var e=eff(),v=inp.value,t=v.trim(),err=chk(v),ok=can(),base;
+  if(!S.dirty&&v!==e)inp.value=v=e;
+  inp.readOnly=!ok||S.busy;
+  if(S.doc&&e!==DEF){base='Using custom source: '+msk(host(e))+(S.doc.savedAt?', saved '+when(S.doc.savedAt):'')+(S.doc.savedByName?' by '+nm(S.doc.savedByName):'')}else base='Using default source';
+  var msg=S.msg,bad=S.bad;if(!msg&&S.dirty&&err){msg=err;bad=true}
+  st.textContent=msg||base;st.className='sub'+(msg&&bad?' bad':'');
+  sv.disabled=!ok||S.busy||!!err||t===e;rs.disabled=!ok||S.busy||(e===DEF&&t===DEF);
+  var okOpen=!chk(e);if(okOpen){op.setAttribute('href',e);op.classList.remove('off');op.removeAttribute('aria-disabled')}else{op.removeAttribute('href');op.classList.add('off');op.setAttribute('aria-disabled','true')}
+  op.setAttribute('aria-label','Open the pricing source in a new tab');
+  var note='';if(S.pend||S.signed===null)note='Checking whether you can edit this page.';else if(!S.db)note='Saving needs the page database, which is not available in this view.';else if(!ok)note='Only people who can edit this page can change it.';
+  ro.textContent=note;ro.hidden=!note;la.textContent=lastTxt()}
+ function who(){return Promise.resolve().then(function(){var cl=window.claude;return cl&&typeof cl.use==='function'?cl.use('user'):null}).then(function(u){if(!u||typeof u.id!=='function')return null;
+  return Promise.resolve(u.id()).then(function(id){id=typeof id==='string'?id.trim():'';if(!id)return null;
+   return Promise.resolve(typeof u.me==='function'?u.me():null).then(function(me){me=me&&typeof me==='object'?me:{};var n=me.name||me.displayName||me.fullName||'';return{id:id,name:typeof n==='string'?n.trim().slice(0,120):''}},function(){return{id:id,name:''}})})}).then(function(w){return w},function(){return null})}
+ function permErr(e){return /not_granted|not_writer|permission|denied|forbidden|unauthori/i.test(String((e&&(e.code||''))+' '+(e&&e.message||'')))}
+ function write(url){if(!can()||S.busy)return;var err=chk(url);if(err){S.msg=err;S.bad=true;paint();return}
+  S.busy=true;S.msg='Saving.';S.bad=false;paint();
+  who().then(function(w){if(!w){S.busy=false;S.msg='Your identity could not be confirmed, so this cannot be saved from here.';S.bad=true;paint();return}
+   var o={url:url.trim(),savedAt:new Date().toISOString().replace(/\.\d+Z$/,'Z'),savedById:w.id,savedByName:w.name||''},p;
+   try{p=S.db.doc('settings/pricing').set(o)}catch(e){p=Promise.reject(e)}
+   Promise.resolve(p).then(function(){S.doc=snapDoc(o);S.busy=false;S.dirty=false;S.msg='Saved. Used on the next run.';S.bad=false;inp.value=o.url;paint()},
+    function(er){S.busy=false;S.bad=true;if(permErr(er)){S.edit=false;S.msg='Could not save: only people who can edit this page can change it.'}else S.msg='Could not save. Try again.';paint()})})}
+ inp.addEventListener('input',function(){S.dirty=inp.value.trim()!==eff();S.msg='';S.bad=false;paint()});
+ inp.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&!sv.disabled){ev.preventDefault();write(inp.value)}});
+ sv.addEventListener('click',function(){write(inp.value)});
+ rs.addEventListener('click',function(){inp.value=DEF;S.dirty=false;write(DEF)});
+ var mkc=$('mk');if(mkc)mkc.addEventListener('change',function(){paint()});
+ (function(){var cl=window.claude;if(!cl||typeof cl.use!=='function'){S.pend=false;S.signed=false;S.edit=false;paint();return}
+  Promise.resolve().then(function(){return cl.use('user')}).then(function(u){return u&&typeof u==='object'?u:null},function(){return null}).then(function(u){var ce=null;if(u&&typeof u.canEdit==='function'){try{ce=u.canEdit()!==false}catch(e){ce=null}}S.signed=!!u;S.edit=u?(ce===null?true:ce):false;paint()});
+  Promise.resolve().then(function(){return cl.use('db')}).then(function(db){S.pend=false;if(db&&typeof db.doc==='function'){S.db=db;try{db.doc('settings/pricing').onSnapshot(function(s){S.doc=snapDoc(s);paint()},function(){S.msg='Could not read the saved source. Showing the default.';S.bad=true;paint()})}catch(e){}}paint()},function(){S.pend=false;paint()})})();
+ paint();
+ return{paint:paint,chk:chk,state:S}})()}catch(e){PRC=null}
 var XPAGE='chargeback';
 var XS=[
  {id:'chargeback',label:'Chargeback by protection group',text:function(){return csv0()}},
