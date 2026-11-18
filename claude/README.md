@@ -32,7 +32,7 @@ Tool calls, elapsed time, estimated tokens and estimated cost for the last run, 
 
 ![Run Metrics tab](../docs/screenshots/run-metrics-claude.png)
 
-## Settings
+## About the Settings tab
 
 The last tab explains how the page uses your data: the Helios data tools query your Cohesity clusters directly and nothing is sent through Helios to an LLM. The tab is a table with one row, Data tools (always on). Below the table, the **Refresh schedule** card shows the schedule the skill saw in Claude's scheduler at its last run and lets editors of the page request a frequency, day, time and time zone (or off). The request is saved in the page database; the skill converts it to the local time of the computer that runs it and applies it at its next run (Claude must be open on that computer; scheduled tasks may move to the cloud later). The page needs the `downloads`, `db` and `user` capabilities; the skill asks nothing before or after a run.
 

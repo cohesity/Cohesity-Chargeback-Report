@@ -29,6 +29,12 @@ You set a price per GiB and choose what to bill on; the totals, the share-by-clu
 
 The sections below describe the Claude skill unless a heading says Copilot Studio.
 
+## Sample output
+
+![Report tab](docs/screenshots/chargeback-report-claude.png)
+
+Screenshots of every tab, with lab data and names blurred, are in [claude/README.md](claude/README.md).
+
 ## What you get
 
 | Area | What it shows |
